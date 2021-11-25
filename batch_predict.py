@@ -40,7 +40,7 @@ def main():
     model = resnet34(num_classes=5).to(device)
 
     # load model weights
-    weights_path = "./resNet34.pth"
+    weights_path = "./resnet34.pth"
     assert os.path.exists(weights_path), "file: '{}' dose not exist.".format(weights_path)
     model.load_state_dict(torch.load(weights_path, map_location=device))
 
